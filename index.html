@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Alejandra</title>
+  <style>
+    .body {
+      background:  #f5c0b1;
+      text-align: center;
+    }
+
+    .body__title {
+      color: white;
+    }
+
+    .body__img {
+      width: 100%;
+      max-width: 512px;
+      border-radius: 25%;
+    }
+  </style>
+</head>
+
+<body class="body">
+    
+  <h1 class="body__title">Alejandra Oroza Alvarez ¿te gustaría ser mi Enamorada? 💖 </h1>
+  <img src="https://previews.123rf.com/images/maforke/maforke1702/maforke170200001/72954103-perro-rom%C3%A1ntico-con-rosa-en-la-boca.jpg" alt="Foto D My" class="body__img" />
+  <br>
+  <button id="yes">💞Si Quiero💞</button>
+  <button id="no">😭No Quiero😭</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      alert('¡Bienvenida, Alejandra! Espero que te guste esta sorpresa. 💖');
+    });
+
+    const vuttonSi = document.getElementById('yes');
+    const vuttonNo = document.getElementById('no');
+
+    const respuesta1 = () => {
+      alert('💞Muchas gracias por darme esta oportunidad y te prometó que mi corazón solo será para ti💞');
+      location.href = 'https://www.youtube.com/watch?v=44kityInDvM';
+    };
+
+    const respuesta2 = () => {
+      vuttonNo.style.position = 'absolute';
+      vuttonNo.style.top = (Math.random() * window.innerHeight + 'px');
+      vuttonNo.style.left = (Math.random() * window.innerWidth + 'px');
+    };
+
+    vuttonSi.addEventListener('click', respuesta1);
+    vuttonNo.addEventListener('mouseover', respuesta2);
+  </script>
+</body>
+
+</html>
